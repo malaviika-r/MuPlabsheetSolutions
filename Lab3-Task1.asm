@@ -10,7 +10,7 @@
 	X1: 	cmp al, [si]
 		jne X2
 		mov [si], bl
-	X2:	inc bx
+	X2:	inc si
 		dec cl
 		cmp cl, 00h
 		jne X1
