@@ -1,0 +1,4 @@
+a) MOV AX, 1133
+b) MOV BH, AL
+   MOV BL, AH
+c) MOV [BX+20], BX
