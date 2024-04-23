@@ -1,6 +1,6 @@
 .model tiny 
 .data
-		array1 db 91h, 02h, 083h, 0Ah, 075h, 0Ah, 047h
+		array1 dw -91h, -02h, -083h, 0Ah, 075h, 0Ah, 047h
 		count db 07h
 		NEG1 db ?
 .code
@@ -13,8 +13,9 @@
 		jle X2                 ; if 00 is smaller, will jump to X2
 		inc dl
 	X2: 	inc bx
+		inc bx
 		dec cl
 		jnz X1
-		mov NEG1, dl
+		mov NEG1, dl	       ; the value stored in NEG1 must be 3 according to the values stored in the array
 .exit
 end
