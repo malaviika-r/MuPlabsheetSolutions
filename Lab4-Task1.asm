@@ -1,8 +1,8 @@
 .model tiny
 .data
-			`          dat1         db 'wasitcatisaw'
-			           dat1length   db 0bh
-			           res 		dw 00h
+		dat1         db 'wasitcatisaw'
+		dat1length   db 0bh
+		res 	     dw 00h
 .code
 .startup
 		lea si, dat1
