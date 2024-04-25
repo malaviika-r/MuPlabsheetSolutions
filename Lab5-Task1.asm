@@ -4,18 +4,18 @@
 	strNotA db "The character entered is not a$"
 .code
 .startup
-    mov ah, 01
+    mov ah, 01		; reading a character
     INT 21h
-    cmp al, 61h
+    cmp al, 61h		; comparing the input character to 'a' (61h)
     jz x1
 
-    lea dx, strNotA
+    lea dx, strNotA	; displaying strnotA
     mov cx, 26
     mov ah, 09h
     INT 21h
     jmp ending
 
-x1: lea dx, strA
+x1: lea dx, strA	; displaying strA
     mov cx, 30
     mov ah, 09h
     INT 21h
