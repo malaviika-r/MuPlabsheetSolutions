@@ -1,16 +1,16 @@
 .model tiny
 .data
 	fname1	db	'ID.TXT',0
-	handle1	dw ?
-	fname2	db 'name.txt',0
-	handle2	dw ?
+	handle1	dw 	?
+	fname2	db 	'name.txt',0
+	handle2	dw 	?
 	fname3	db	'splice.txt',0
 	handle3	dw	?
 	
 	part1		db 0Dh dup('$')
-	len1        db 0Dh
+	len1        	db 0Dh
 	part2		db 7h dup('$')
-	len2        db 7h
+	len2        	db 08h
 
 .code
 .startup
